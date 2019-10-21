@@ -2,16 +2,16 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import os
 
-def train(bot):
+def train(serra):
 	path = 'data\\english\\'
-	for file in os.listdir(path):
+	for file in os.listdir(path):               #changing the name of bot to serra and also changed my_bot to my_serra
 		data = open(path + file, 'r').readlines()
-		bot.train(data)
+		serra.train(data)
 
 def main():
-	bot = ChatBot('My_Bot')
-	bot.set_trainer(ListTrainer)
-	train(bot)
+	serra = ChatBot('My_serra')
+	serra.set_trainer(ListTrainer)
+	train(serra)
 
 
 if __name__ == '__main__':
